@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Vercel
+.vercel
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Microsoft Office temp/lock files
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+
+# Environment / secrets (in case tooling is added later)
+.env
+.env.local
+
+# Dependencies (in case tooling is added later)
+node_modules/

@@ -4,7 +4,7 @@
 
 Welcome to the source code of my personal developer portfolio! This repository contains a fully responsive, dark-themed website designed to showcase my skills, projects, educational background, and competitive programming achievements.
 
-🌍 **Live Website:** [https://ap24110011314.github.io/](https://ap24110011314.github.io/)
+🌍 **Live Website:** [https://amanmaddheshiya.me/](https://amanmaddheshiya.me/)
 
 ## ✨ Features
 
@@ -17,7 +17,7 @@ Welcome to the source code of my personal developer portfolio! This repository c
 ## 🗂 Sections Included
 
 1. **Hero Section:** Introduction, key statistics, and a professional photo with animated rings.
-2. **Experience & Education:** A visual timeline detailing academic journey and internships.
+2. **Experience & Education:** Separate timelines for internships/programs and academic journey (with campus photos).
 3. **Projects:** Highlighted full-stack and algorithmic projects with direct links to source code.
 4. **Competitive Programming:** Visualized LeetCode progress bars and CodeChef badges.
 5. **Technologies & Skills:** Categorized technical toolkit using emojis and flex-wrap tags.
@@ -37,11 +37,11 @@ To run this project locally, you don't need any complex build tools or servers.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/AP24110011314/AP24110011314.github.io.git
+   git clone https://github.com/AP24110011314/Profile.git
    ```
 2. Open the directory:
    ```bash
-   cd AP24110011314.github.io
+   cd Profile
    ```
 3. Open `index.html` in your favorite web browser.
    ```bash

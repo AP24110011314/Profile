@@ -165,8 +165,9 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .tc-date{font-size:.78rem;color:var(--muted);background:var(--surface2);padding:.25rem .75rem;border-radius:999px;white-space:nowrap;font-weight:500}
 .tc-desc{color:var(--muted);font-size:.9rem;margin:.5rem 0 .8rem;line-height:1.7}
 .tc-tags{display:flex;gap:.5rem;flex-wrap:wrap}
-.tc-tags span{font-size:.74rem;background:rgba(52,61,26,.06);color:var(--accent);border:1px solid rgba(52,61,26,.12);padding:.22rem .7rem;border-radius:999px;font-weight:500;transition:all .2s cubic-bezier(.4,0,.2,1);cursor:default}
+.tc-tags span{font-size:.74rem;background:rgba(52,61,26,.06);color:var(--accent);border:1px solid rgba(52,61,26,.12);padding:.22rem .7rem;border-radius:999px;font-weight:500;transition:all .2s cubic-bezier(.4,0,.2,1);cursor:default;display:inline-flex;align-items:center;justify-content:center;max-width:100%}
 .tc-tags span:active{background:rgba(52,61,26,.12);transform:scale(.95);transition-duration:.08s}
+.edu-photo{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:1.1rem;border:1px solid var(--border);background:var(--surface2)}
 
 /* ─── PROJECTS ─── */
 .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -325,11 +326,16 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 /* Tablet portrait + mobile nav */
 @media(max-width:768px){
   #navbar{padding:0 1rem}
-  .nav-links{position:fixed;top:var(--nav-h);right:0;bottom:0;width:min(320px,85vw);flex-direction:column;align-items:stretch;gap:.25rem;background:var(--surface);border-left:1px solid var(--border);padding:1.25rem 1rem 2rem;box-shadow:var(--shadow-lg);transform:translateX(102%);transition:transform .3s ease-out;overflow-y:auto;z-index:101}
-  .nav-links.open{transform:translateX(0)}
+  /* NOTE: .nav-links/.nav-scrim must be position:absolute (not fixed) here.
+     #navbar uses backdrop-filter, which makes it the containing block for
+     fixed-position descendants — a fixed panel would collapse to zero
+     height and the menu would never appear. Since #navbar is fixed at the
+     top of the viewport, absolute positioning renders identically. */
+  .nav-links{position:absolute;top:100%;right:0;width:min(320px,85vw);height:calc(100vh - var(--nav-h));height:calc(100dvh - var(--nav-h));flex-direction:column;align-items:stretch;gap:.25rem;background:var(--surface);border-left:1px solid var(--border);padding:1.25rem 1rem 2rem;box-shadow:var(--shadow-lg);transform:translateX(102%);transition:transform .3s ease-out,visibility 0s linear .3s;overflow-y:auto;z-index:101;visibility:hidden}
+  .nav-links.open{transform:translateX(0);visibility:visible;transition:transform .3s ease-out}
   .nav-links a{display:flex;align-items:center;min-height:44px;font-size:.95rem;padding:.6rem .9rem}
   .nav-links .nav-cta{justify-content:center;margin-top:.5rem;min-height:44px}
-  .nav-scrim{display:block;position:fixed;inset:var(--nav-h) 0 0 0;background:rgba(30,27,20,.35);opacity:0;pointer-events:none;transition:opacity .3s ease-out;z-index:100}
+  .nav-scrim{display:block;position:absolute;top:100%;left:0;right:0;height:calc(100vh - var(--nav-h));height:calc(100dvh - var(--nav-h));background:rgba(30,27,20,.35);opacity:0;pointer-events:none;transition:opacity .3s ease-out;z-index:100}
   .nav-scrim.show{opacity:1;pointer-events:all}
   .hamburger{display:flex}
   .hero{padding:calc(var(--nav-h) + 1.5rem) 1.25rem 3rem;min-height:auto}
@@ -385,9 +391,10 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
   .timeline-card{padding:1.1rem}
   .tc-tags span{font-size:.7rem}
 }
-/* Touch devices: 44px tap targets */
+/* Touch devices: 44px tap targets (interactive elements only — .tc-tags span
+   are static labels, so they keep their snug pill size with centered text) */
 @media(pointer:coarse){
-  .nav-links a,.project-link,.contact-card,.skill-chip,.badge-chip,.tc-tags span{min-height:44px}
+  .nav-links a,.project-link,.contact-card,.skill-chip,.badge-chip{min-height:44px}
   .project-link{align-items:center;padding:.4rem 0}
   .contact-card{display:flex;flex-direction:column;align-items:center;justify-content:center}
 }
