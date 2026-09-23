@@ -5,30 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aman Maddheshiya – Developer & AI/ML Engineer</title>
   <meta name="description" content="Portfolio of Aman Maddheshiya – B.Tech AI & ML student, Full-Stack Developer, and Competitive Programmer from SRM University, AP." />
+  <meta property="og:title" content="Aman Maddheshiya – Developer & AI/ML Engineer" />
+  <meta property="og:description" content="Portfolio of Aman Maddheshiya – B.Tech AI & ML student, Full-Stack Developer, and Competitive Programmer from SRM University, AP." />
+  <meta property="og:image" content="Photo.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/jpeg" href="Photo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="Photo.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#about">Skip to content</a>
 
   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
       <span class="nav-logo">AM<span class="dot">.</span></span>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#interests">Interests</a></li>
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
+        <li><a href="#contact" class="nav-cta btn btn-sm">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
     </div>
+    <div class="nav-scrim" id="nav-scrim"></div>
   </nav>
 
   <!-- HERO -->
@@ -60,6 +69,11 @@
         </div>
         <div class="hero-stats">
           <div class="stat">
+            <span class="stat-num">9.4</span>
+            <span class="stat-label">CGPA / 10.0</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
             <span class="stat-num">173</span>
             <span class="stat-label">LeetCode Solved</span>
           </div>
@@ -70,12 +84,12 @@
           </div>
           <div class="stat-divider"></div>
           <div class="stat">
-            <span class="stat-num">96.4%</span>
+            <span class="stat-num">95.4%</span>
             <span class="stat-label">Class X Score</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat">
-            <span class="stat-num">86.4%</span>
+            <span class="stat-num">87.5%</span>
             <span class="stat-label">Class XII Score</span>
           </div>
         </div>
@@ -83,7 +97,7 @@
       <div class="hero-photo-wrap">
         <div class="photo-ring"></div>
         <div class="photo-ring ring2"></div>
-        <img src="Photo.jpg" alt="Aman Maddheshiya" class="hero-photo" id="hero-photo" />
+        <img src="Photo.jpg" alt="Aman Maddheshiya – Developer & AI/ML Engineer, SRM University" class="hero-photo" id="hero-photo" loading="eager" width="320" height="320" style="aspect-ratio:1/1" />
         <div class="photo-badge badge-ml">AI / ML</div>
         <div class="photo-badge badge-dev">Full-Stack</div>
       </div>
@@ -103,6 +117,23 @@
       <div class="timeline">
 
         <div class="timeline-item" data-aos>
+          <div class="timeline-dot accent"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Research Intern</h3>
+                <p class="tc-org">SRM University, Andhra Pradesh</p>
+              </div>
+              <span class="tc-date">Jun – Jul 2026</span>
+            </div>
+            <p class="tc-desc">Built promptFlow-AI, an academic publication tracking system (FastAPI, Scikit-learn, React 19), integrating a TF-IDF + Naive Bayes NLP service achieving 98.00% accuracy, 100% recall, and 0.999ms inference latency. Engineered backend metadata-extraction and reporting pipelines processing 50 real faculty publication emails with 100% DOI/Journal resolution accuracy at 937 docs/sec throughput.</p>
+            <div class="tc-tags">
+              <span>FastAPI</span><span>Scikit-learn</span><span>React 19</span><span>NLP</span><span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos>
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="tc-header">
@@ -112,9 +143,9 @@
               </div>
               <span class="tc-date">Jun 2024 – Jun 2028</span>
             </div>
-            <p class="tc-desc">Pursuing a full-time degree in Artificial Intelligence & Machine Learning. Relevant coursework includes Data Structures & Algorithms, Machine Learning, and Web Development.</p>
+            <p class="tc-desc">Pursuing a full-time degree in Artificial Intelligence & Machine Learning. CGPA: 9.4/10.0. Relevant coursework includes Data Structures & Algorithms, Machine Learning, and Web Development.</p>
             <div class="tc-tags">
-              <span>AI / ML</span><span>DSA</span><span>Web Dev</span>
+              <span>AI / ML</span><span>DSA</span><span>Web Dev</span><span>CGPA 9.4</span>
             </div>
           </div>
         </div>
@@ -163,9 +194,9 @@
               </div>
               <span class="tc-date">Completed 2024</span>
             </div>
-            <p class="tc-desc">Scored 86.4% (432/500) in Senior School Certificate Examination. Core subjects: Physics, Chemistry, Mathematics, Informatics Practice, and English.</p>
+            <p class="tc-desc">Scored 87.50% in Senior School Certificate Examination. Core subjects: Physics, Chemistry, Mathematics, Informatics Practice, and English.</p>
             <div class="tc-tags">
-              <span>86.4%</span><span>PCM + IP</span><span>CBSE Board</span>
+              <span>87.50%</span><span>PCM + IP</span><span>CBSE Board</span>
             </div>
           </div>
         </div>
@@ -180,9 +211,9 @@
               </div>
               <span class="tc-date">Completed 2022</span>
             </div>
-            <p class="tc-desc">Scored 96.4% at one of India's premier merit-based, fully residential leadership schools. Admission through competitive scholarship selection.</p>
+            <p class="tc-desc">Scored 95.4% at one of India's premier merit-based, fully residential leadership schools. Admission through competitive scholarship selection.</p>
             <div class="tc-tags">
-              <span>96.4%</span><span>Merit Scholarship</span><span>Residential</span>
+              <span>95.4%</span><span>Merit Scholarship</span><span>Residential</span>
             </div>
           </div>
         </div>
@@ -204,15 +235,41 @@
           <div class="project-glow"></div>
           <div class="project-top">
             <div class="project-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.663 17h4.674M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            </div>
+            <span class="project-year">2026</span>
+          </div>
+          <h3>PromptFlow-AI</h3>
+          <p class="project-tag">Academic Publication Tracking System</p>
+          <p class="project-desc">Academic publication tracking system (FastAPI, Scikit-learn, React 19) with a TF-IDF + Naive Bayes NLP service and metadata-extraction pipelines over 50 real faculty emails, plus notification tracking with Excel/PDF exports.</p>
+          <div class="project-tech">
+            <span>FastAPI</span><span>Scikit-learn</span><span>React 19</span><span>Python</span><span>NLP</span><span>OpenPyXL</span><span>ReportLab</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric"><span class="metric-val">98%</span><span class="metric-label">Accuracy</span></div>
+            <div class="metric"><span class="metric-val">100%</span><span class="metric-label">Recall</span></div>
+            <div class="metric"><span class="metric-val">0.999ms</span><span class="metric-label">Latency</span></div>
+            <div class="metric"><span class="metric-val">937</span><span class="metric-label">Docs/sec</span></div>
+          </div>
+          <a href="https://github.com/AP24110011314" target="_blank" rel="noopener" class="project-link" id="link-promptflow">
+            View on GitHub
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card featured" data-aos>
+          <div class="project-glow"></div>
+          <div class="project-top">
+            <div class="project-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             </div>
             <span class="project-year">2026</span>
           </div>
           <h3>BharatBazzar</h3>
           <p class="project-tag">Full-Stack E-Commerce Platform</p>
-          <p class="project-desc">End-to-end e-commerce web app featuring product listings, cart management, user authentication, admin dashboard, wishlist, and product reviews.</p>
+          <p class="project-desc">Complete e-commerce platform with normalized MySQL database featuring triggers and stored procedures. Node.js/Express REST API backend with responsive frontend design.</p>
           <div class="project-tech">
-            <span>JavaScript</span><span>Node.js</span><span>HTML/CSS</span><span>REST APIs</span><span>PostgreSQL</span>
+            <span>JavaScript</span><span>Node.js</span><span>Express</span><span>MySQL</span><span>REST APIs</span>
           </div>
           <a href="https://github.com/AP24110011314/BharatBazzar" target="_blank" rel="noopener" class="project-link" id="link-bharatbazzar">
             View on GitHub
@@ -229,9 +286,9 @@
           </div>
           <h3>Speak Ease</h3>
           <p class="project-tag">Duolingo-Clone · Language Learning App</p>
-          <p class="project-desc">MERN-stack language learning platform with authentication, lesson modules, quiz progress tracking, and a gamified Neo-Brutalist design system.</p>
+          <p class="project-desc">Interactive language learning platform with vocabulary practice, quizzes, and progress tracking. Built with JavaScript featuring a user-friendly interface for multiple language lessons.</p>
           <div class="project-tech">
-            <span>MERN</span><span>Node.js</span><span>Express</span><span>MongoDB</span>
+            <span>JavaScript</span><span>Node.js</span><span>Express</span><span>MongoDB</span>
           </div>
           <a href="https://github.com/AP24110011314" target="_blank" rel="noopener" class="project-link" id="link-speakease">
             View on GitHub
@@ -248,7 +305,7 @@
           </div>
           <h3>Data Structure Simulator</h3>
           <p class="project-tag">Interactive Visualizer</p>
-          <p class="project-desc">Interactive visualizer for Data Structures like Stack, Queue, and Linked List, helping students understand algorithmic workflows.</p>
+          <p class="project-desc">Interactive visualizer for Stack, Queue, and Linked List data structures. HTML/CSS/JavaScript implementation serving as an educational tool for understanding DSA concepts.</p>
           <div class="project-tech">
             <span>HTML</span><span>CSS</span><span>JavaScript</span>
           </div>
@@ -261,22 +318,21 @@
         <div class="project-card" data-aos>
           <div class="project-top">
             <div class="project-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
             </div>
             <span class="project-year">2026</span>
           </div>
-          <h3>Job Scheduling (CCC)</h3>
-          <p class="project-tag">Algorithms & Optimization</p>
-          <p class="project-desc">A project addressing complex Job Scheduling algorithms to optimize workflow execution times and resource allocation.</p>
+          <h3>8086 Emulator</h3>
+          <p class="project-tag">Intel 8086 Microprocessor Emulator</p>
+          <p class="project-desc">An Intel 8086 microprocessor emulator that runs in the browser or as a native macOS app. Write 8086 assembly, assemble it, and step through execution while registers, flags, stack, and memory update live — with breakpoints, a live register/flags panel, memory viewer, and DOS INT 21h simulation.</p>
           <div class="project-tech">
-            <span>C / C++</span><span>Algorithms</span>
+            <span>TypeScript</span><span>React</span><span>Vite</span><span>Tauri</span><span>Vitest</span>
           </div>
-          <a href="https://github.com/AP24110011314/Job-Scheduling--CCC_Project-" target="_blank" rel="noopener" class="project-link" id="link-jobsched">
+          <a href="[PASTE YOUR ACTUAL REPO URL HERE]" target="_blank" rel="noopener" class="project-link" id="link-8086-emulator">
             View on GitHub
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
-
       </div>
     </div>
   </section>
@@ -341,31 +397,110 @@
         <div class="skill-group" data-aos>
           <h4 class="skill-group-title">Languages</h4>
           <div class="skill-chips">
+            <div class="skill-chip"><span class="chip-icon">🐍</span>Python</div>
             <div class="skill-chip"><span class="chip-icon">⚡</span>C++</div>
-            <div class="skill-chip"><span class="chip-icon">🌐</span>JavaScript</div>
-            <div class="skill-chip"><span class="chip-icon">📄</span>HTML</div>
-            <div class="skill-chip"><span class="chip-icon">🎨</span>CSS</div>
+            <div class="skill-chip"><span class="chip-icon">🌐</span>JavaScript (ES6+)</div>
+            <div class="skill-chip"><span class="chip-icon">🔷</span>TypeScript</div>
+            <div class="skill-chip"><span class="chip-icon">📄</span>HTML/CSS</div>
+            <div class="skill-chip"><span class="chip-icon">🗄️</span>SQL</div>
           </div>
         </div>
         <div class="skill-group" data-aos>
-          <h4 class="skill-group-title">Technologies</h4>
+          <h4 class="skill-group-title">Frameworks &amp; Libraries</h4>
           <div class="skill-chips">
+            <div class="skill-chip"><span class="chip-icon">⚛️</span>React.js</div>
             <div class="skill-chip"><span class="chip-icon">🟢</span>Node.js</div>
             <div class="skill-chip"><span class="chip-icon">🚂</span>Express.js</div>
-            <div class="skill-chip"><span class="chip-icon">🔗</span>REST APIs</div>
-            <div class="skill-chip"><span class="chip-icon">🐙</span>Git/GitHub</div>
-            <div class="skill-chip"><span class="chip-icon">🍃</span>MongoDB</div>
-            <div class="skill-chip"><span class="chip-icon">🐘</span>PostgreSQL</div>
+            <div class="skill-chip"><span class="chip-icon">⚡</span>FastAPI</div>
+            <div class="skill-chip"><span class="chip-icon">🌶️</span>Flask</div>
+            <div class="skill-chip"><span class="chip-icon">🎨</span>Tailwind CSS</div>
+            <div class="skill-chip"><span class="chip-icon">🔌</span>Socket.IO</div>
+            <div class="skill-chip"><span class="chip-icon">🐼</span>Pandas</div>
+            <div class="skill-chip"><span class="chip-icon">🔢</span>NumPy</div>
+            <div class="skill-chip"><span class="chip-icon">🤖</span>Scikit-Learn</div>
           </div>
         </div>
         <div class="skill-group" data-aos>
-          <h4 class="skill-group-title">Domains</h4>
+          <h4 class="skill-group-title">Databases</h4>
+          <div class="skill-chips">
+            <div class="skill-chip"><span class="chip-icon">🐘</span>PostgreSQL</div>
+            <div class="skill-chip"><span class="chip-icon">🐬</span>MySQL</div>
+            <div class="skill-chip"><span class="chip-icon">🍃</span>MongoDB</div>
+            <div class="skill-chip"><span class="chip-icon">🔴</span>Redis</div>
+          </div>
+        </div>
+        <div class="skill-group" data-aos>
+          <h4 class="skill-group-title">AI / ML</h4>
+          <div class="skill-chips">
+            <div class="skill-chip"><span class="chip-icon">🧠</span>LLMs</div>
+            <div class="skill-chip"><span class="chip-icon">📚</span>RAG</div>
+            <div class="skill-chip"><span class="chip-icon">💬</span>Prompt Engineering</div>
+            <div class="skill-chip"><span class="chip-icon">📝</span>NLP</div>
+            <div class="skill-chip"><span class="chip-icon">👁️</span>Computer Vision</div>
+            <div class="skill-chip"><span class="chip-icon">🤝</span>Multi-Agent Systems</div>
+            <div class="skill-chip"><span class="chip-icon">🦙</span>Ollama</div>
+          </div>
+        </div>
+        <div class="skill-group" data-aos>
+          <h4 class="skill-group-title">Cloud &amp; DevOps</h4>
+          <div class="skill-chips">
+            <div class="skill-chip"><span class="chip-icon">☁️</span>AWS</div>
+            <div class="skill-chip"><span class="chip-icon">🔵</span>Azure (OpenAI)</div>
+            <div class="skill-chip"><span class="chip-icon">🐳</span>Docker</div>
+            <div class="skill-chip"><span class="chip-icon">🐙</span>Git/GitHub Actions</div>
+            <div class="skill-chip"><span class="chip-icon">🔄</span>CI/CD</div>
+            <div class="skill-chip"><span class="chip-icon">🔗</span>REST APIs</div>
+            <div class="skill-chip"><span class="chip-icon">📮</span>Postman</div>
+          </div>
+        </div>
+        <div class="skill-group" data-aos>
+          <h4 class="skill-group-title">Core CS</h4>
           <div class="skill-chips">
             <div class="skill-chip"><span class="chip-icon">🏗️</span>Full-Stack Dev</div>
-            <div class="skill-chip"><span class="chip-icon">🧠</span>AI/ML Fundamentals</div>
             <div class="skill-chip"><span class="chip-icon">🔢</span>DSA</div>
             <div class="skill-chip"><span class="chip-icon">⚙️</span>System Design</div>
+            <div class="skill-chip"><span class="chip-icon">🧩</span>OOP</div>
+            <div class="skill-chip"><span class="chip-icon">🗃️</span>DBMS</div>
+            <div class="skill-chip"><span class="chip-icon">🧵</span>Multithreading</div>
+            <div class="skill-chip"><span class="chip-icon">🛠️</span>Software Engineering</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section class="section" id="interests">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Passions</span>
+        <h2>Interests</h2>
+      </div>
+      <div class="interests-grid">
+        <div class="interest-card" data-aos>
+          <div class="interest-icon">🏆</div>
+          <h4>Competitive Programming</h4>
+          <p>Sharpening algorithmic thinking and problem-solving skills through LeetCode & CodeChef challenges.</p>
+        </div>
+        <div class="interest-card" data-aos>
+          <div class="interest-icon">🤖</div>
+          <h4>Machine Learning</h4>
+          <p>Exploring NLP, computer vision, and multi-agent systems to build intelligent solutions.</p>
+        </div>
+        <div class="interest-card" data-aos>
+          <div class="interest-icon">🏗️</div>
+          <h4>Full-Stack Development</h4>
+          <p>Crafting end-to-end web applications with modern frameworks and scalable architectures.</p>
+        </div>
+        <div class="interest-card" data-aos>
+          <div class="interest-icon">🌍</div>
+          <h4>Open Source</h4>
+          <p>Contributing to open-source projects and building tools that empower the developer community.</p>
+        </div>
+        <div class="interest-card" data-aos>
+          <div class="interest-icon">⚙️</div>
+          <h4>System Design</h4>
+          <p>Designing robust, scalable distributed systems and understanding architectural trade-offs.</p>
         </div>
       </div>
     </div>
@@ -427,52 +562,36 @@
       </div>
       <div class="certs-grid">
         <div class="cert-card" data-aos id="cert-dabur">
-          <div class="cert-img-wrap">
-            <img src="Dabur_internship.jpg" alt="Dabur Internship Certificate of Appreciation" class="cert-img" loading="lazy" />
-            <div class="cert-overlay">
-              <button class="cert-view-btn" onclick="openModal('Dabur_internship.jpg','Dabur India Limited – Certificate of Appreciation')" id="btn-cert-dabur">View Certificate</button>
-            </div>
+          <div class="cert-preview-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
-          <div class="cert-info">
-            <h4>Certificate of Appreciation</h4>
-            <p>Dabur India Limited · Internship · 2023</p>
-          </div>
+          <h4>Certificate of Appreciation</h4>
+          <p>Dabur India Limited · Internship · 2023</p>
+          <button class="cert-view-btn" data-cert="dabur" data-title="Dabur India Limited – Certificate of Appreciation" data-file="Dabur_internship.jpg">View Certificate</button>
         </div>
         <div class="cert-card" data-aos id="cert-ashoka">
-          <div class="cert-img-wrap">
-            <img src="YSP.jpg" alt="Ashoka University Young Scholars Programme Certificate" class="cert-img" loading="lazy" />
-            <div class="cert-overlay">
-              <button class="cert-view-btn" onclick="openModal('YSP.jpg','Ashoka University – Young Scholars Programme')" id="btn-cert-ashoka">View Certificate</button>
-            </div>
+          <div class="cert-preview-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <div class="cert-info">
-            <h4>Young Scholars Programme</h4>
-            <p>Ashoka University · Advanced CS Stream · May–Jun 2023</p>
-          </div>
+          <h4>Young Scholars Programme</h4>
+          <p>Ashoka University · Advanced CS Stream · May–Jun 2023</p>
+          <button class="cert-view-btn" data-cert="ashoka" data-title="Ashoka University – Young Scholars Programme" data-file="YSP.jpg">View Certificate</button>
         </div>
         <div class="cert-card" data-aos id="cert-mongodb">
-          <div class="cert-img-wrap">
-            <img src="mongodb copy.pdf.png" alt="MongoDB Certification" class="cert-img" loading="lazy" />
-            <div class="cert-overlay">
-              <button class="cert-view-btn" onclick="openModal('mongodb copy.pdf.png','MongoDB Certification')" id="btn-cert-mongodb">View Certificate</button>
-            </div>
+          <div class="cert-preview-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
-          <div class="cert-info">
-            <h4>MongoDB Certification</h4>
-            <p>Database Technologies · 2024</p>
-          </div>
+          <h4>MongoDB Certification</h4>
+          <p>Database Technologies · 2024</p>
+          <button class="cert-view-btn" data-cert="mongodb" data-title="MongoDB Certification" data-file="mongodb-certification.png" data-pdf="mongodb-certification.pdf">View Certificate</button>
         </div>
         <div class="cert-card" data-aos id="cert-12marks">
-          <div class="cert-img-wrap">
-            <img src="12 Marksheet.pdf.png" alt="12th Marksheet" class="cert-img" loading="lazy" />
-            <div class="cert-overlay">
-              <button class="cert-view-btn" onclick="openModal('12 Marksheet.pdf.png','Class XII Marksheet')" id="btn-cert-12marks">View Certificate</button>
-            </div>
+          <div class="cert-preview-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
-          <div class="cert-info">
-            <h4>Class XII Marksheet</h4>
-            <p>CBSE Board · 86.4% · 2024</p>
-          </div>
+          <h4>Class XII Marksheet</h4>
+          <p>CBSE Board · 86.4% · 2024</p>
+          <button class="cert-view-btn" data-cert="marksheet" data-title="Class XII Marksheet" data-file="class-12-marksheet.png" data-pdf="class-12-marksheet.pdf">View Certificate</button>
         </div>
       </div>
     </div>
@@ -507,6 +626,11 @@
           <h4>GitHub</h4>
           <p>AP24110011314</p>
         </a>
+        <a href="https://ap24110011314.github.io" target="_blank" rel="noopener" class="contact-card" id="link-portfolio">
+          <div class="contact-icon">🌐</div>
+          <h4>Portfolio</h4>
+          <p>ap24110011314.github.io</p>
+        </a>
       </div>
       <p class="location-note">📍 Amaravati, Andhra Pradesh, India</p>
     </div>
@@ -514,16 +638,15 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>Designed & Built by <strong>Aman Maddheshiya</strong> · 2025</p>
-    <p class="footer-sub">SRM University, AP · B.Tech AI & Machine Learning</p>
+    <p>Designed & Built by <strong>Aman Maddheshiya</strong> · 2026</p>
+    <p class="footer-sub">SRM University, AP · B.Tech AI & Machine Learning · CGPA 9.4</p>
   </footer>
 
   <!-- MODAL -->
-  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
-    <div class="modal-box" onclick="event.stopPropagation()">
-      <button class="modal-close" id="modal-close-btn" onclick="closeModal()">✕</button>
-      <p class="modal-title" id="modal-title"></p>
-      <img src="" alt="" id="modal-img" class="modal-img" />
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close">✕</button>
+      <div class="modal-content" id="modal-content"></div>
     </div>
   </div>
 
