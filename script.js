@@ -154,7 +154,114 @@ document.addEventListener('pointerdown', (e) => {
   setTimeout(() => ripple.remove(), 500);
 });
 
-// Animated bar widths for LeetCode
+// ─── Living hero: typing rotator, count-up stats, particles, parallax ───
+// (all skipped for reduced-motion users — static content stays as-is)
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+
+  // 1. Typing role rotator in the hero tagline
+  const typerEl = document.getElementById('role-typer');
+  if (typerEl) {
+    const roles = ['Full-Stack Developer', 'AI/ML Engineer', 'Competitive Programmer', 'Problem Solver'];
+    typerEl.textContent = roles[0];
+    let roleIdx = 0, charIdx = roles[0].length, deleting = true;
+    function tickTyper() {
+      let delay;
+      if (deleting) {
+        charIdx -= 1;
+        typerEl.textContent = roles[roleIdx].slice(0, Math.max(charIdx, 0));
+        delay = 38;
+        if (charIdx <= 0) {
+          deleting = false;
+          roleIdx = (roleIdx + 1) % roles.length;
+          delay = 350;
+        }
+      } else {
+        charIdx += 1;
+        typerEl.textContent = roles[roleIdx].slice(0, charIdx);
+        delay = 75;
+        if (charIdx >= roles[roleIdx].length) {
+          deleting = true;
+          delay = 1700;
+        }
+      }
+      setTimeout(tickTyper, delay);
+    }
+    // Start after the entrance animation settles
+    setTimeout(tickTyper, 1800);
+  }
+
+  // 2. Count-up hero stats (final values already in HTML as fallback)
+  const statNums = document.querySelectorAll('.stat-num[data-count]');
+  function countUp(el) {
+    const target = parseFloat(el.dataset.count);
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    const suffix = el.dataset.suffix || '';
+    const dur = 1400, t0 = performance.now();
+    function frame(t) {
+      const p = Math.min((t - t0) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * eased).toFixed(decimals) + suffix;
+      if (p < 1) requestAnimationFrame(frame);
+      else el.textContent = target.toFixed(decimals) + suffix;
+    }
+    requestAnimationFrame(frame);
+  }
+  setTimeout(() => statNums.forEach(countUp), 650);
+
+  // 3. Rising bubble particles in the hero background
+  const pWrap = document.getElementById('hero-particles');
+  if (pWrap) {
+    const colors = ['184,137,45', '52,61,26', '120,110,85'];
+    // Scatter bubbles across the full hero height (on phones the hero is
+    // taller than the viewport — starting them all at the bottom would
+    // leave the first screen empty). Negative delays = mid-flight at load.
+    const H = pWrap.offsetHeight || window.innerHeight;
+    for (let i = 0; i < 38; i++) {
+      const s = document.createElement('span');
+      s.className = 'hero-particle';
+      const big = i % 5 === 4; // every 5th bubble is a large blurred one for depth
+      const size = big ? 20 + Math.random() * 14 : 6 + Math.random() * 10;
+      s.style.left = `${(Math.random() * 100).toFixed(2)}%`;
+      s.style.top = `${(Math.random() * H).toFixed(1)}px`;
+      s.style.width = s.style.height = `${size.toFixed(1)}px`;
+      const c = colors[i % colors.length];
+      s.style.background = `radial-gradient(circle at 32% 30%, rgba(255,255,255,.8), rgba(255,255,255,.05) 55%), rgba(${c},.30)`;
+      s.style.border = `1px solid rgba(${c},.35)`;
+      s.style.boxShadow = 'inset -2px -3px 6px rgba(255,255,255,.25)';
+      if (big) s.style.filter = 'blur(1px)';
+      const dur = 6 + Math.random() * 7;
+      s.style.animationDuration = `${dur.toFixed(2)}s`;
+      s.style.animationDelay = `${(-Math.random() * dur).toFixed(2)}s`;
+      pWrap.appendChild(s);
+    }
+  }
+
+  // 4. Subtle mouse parallax on the bg + photo (fine pointers only)
+  const hero = document.querySelector('.hero');
+  const heroBg = document.querySelector('.hero-bg');
+  const photoWrap = document.querySelector('.hero-photo-wrap');
+  if (hero && heroBg && window.matchMedia('(pointer:fine)').matches) {
+    hero.addEventListener('mousemove', (e) => {
+      const r = hero.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      heroBg.style.setProperty('--bgx', `${(x * 18).toFixed(1)}px`);
+      heroBg.style.setProperty('--bgy', `${(y * 18).toFixed(1)}px`);
+      if (photoWrap) {
+        photoWrap.style.setProperty('--phx', `${(x * -14).toFixed(1)}px`);
+        photoWrap.style.setProperty('--phy', `${(y * -14).toFixed(1)}px`);
+      }
+    });
+    hero.addEventListener('mouseleave', () => {
+      heroBg.style.setProperty('--bgx', '0px');
+      heroBg.style.setProperty('--bgy', '0px');
+      if (photoWrap) {
+        photoWrap.style.setProperty('--phx', '0px');
+        photoWrap.style.setProperty('--phy', '0px');
+      }
+    });
+  }
+}
 window.addEventListener('load', () => {
   setTimeout(() => {
     document.querySelectorAll('.bar-fill').forEach(bar => {
