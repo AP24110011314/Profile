@@ -14,8 +14,9 @@
 
 ## Gotchas
 
-- Asset filenames are case-sensitive and some contain spaces (`srmap image.jpg`, `vg10.jpg` vs `VG12.jpg`). Preserve exact names; modal uses `encodeURI()` — keep it.
-- Certificates: cards wire via `data-file` (preview `<img>`) + optional `data-pdf` (download link). Keep PNG previews alongside source PDFs (`mongodb-certification.*`, `class-12-marksheet.*`).
-- Known placeholder: 8086 Emulator link is `[PASTE YOUR ACTUAL REPO URL HERE]` (`index.html:348`) — replace with real URL, don't ship as-is.
-- Fragile: LeetCode bars re-set `bar.style.width` to itself to retrigger the transition (`script.js:158-164`); `[data-aos]` `--aos-delay` is cleared after entry. Don't rely on either persisting.
+- Asset filenames are case-sensitive and some contain spaces (`srmap image.jpg`, `vg10.jpg` vs `VG12.jpg`, `Dabur_internship.jpg`, `YSP.jpg`). Preserve exact names; modal uses `encodeURI()` — keep it.
+- Certificates: cards wire via `data-file` (preview `<img>`) + optional `data-pdf` (download link). Only `mongodb-certification` and `class-12-marksheet` have both PNG + PDF; `Dabur_internship.jpg` / `YSP.jpg` are JPG-only with no `data-pdf`.
+- Known placeholder: 8086 Emulator link is `[PASTE YOUR ACTUAL REPO URL HERE]` (`index.html:350`) — replace with real URL, don't ship as-is.
+- Mobile nav breakpoint is 1000px, not 768px (`style.css:373-381` explains why; ignore stale `script.js:74` "below 768px" comment). `.nav-links` / `.nav-scrim` must stay `position:absolute` — `#navbar` has `backdrop-filter`, which breaks `fixed` descendants (zero-height panel).
+- Fragile: LeetCode bars re-set `bar.style.width` to itself to retrigger the transition (`script.js:265-271`); `[data-aos]` `--aos-delay` is cleared after entry (`script.js:111-114`). Don't rely on either persisting.
 - Preserve `prefers-reduced-motion` handling (disables reveals/ripple), modal focus-to-close-button, and Escape-closes-modal-and-nav.

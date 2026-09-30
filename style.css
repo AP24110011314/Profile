@@ -201,7 +201,9 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .tc-tags{display:flex;gap:.5rem;flex-wrap:wrap}
 .tc-tags span{font-size:.74rem;background:rgba(52,61,26,.06);color:var(--accent);border:1px solid rgba(52,61,26,.12);padding:.22rem .7rem;border-radius:999px;font-weight:500;transition:all .2s cubic-bezier(.4,0,.2,1);cursor:default;display:inline-flex;align-items:center;justify-content:center;max-width:100%}
 .tc-tags span:active{background:rgba(52,61,26,.12);transform:scale(.95);transition-duration:.08s}
-.edu-photo{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:1.1rem;border:1px solid var(--border);background:var(--surface2)}
+.edu-card{display:flex;gap:1.5rem;align-items:flex-start}
+.edu-photo{display:block;width:220px;flex-shrink:0;height:auto;aspect-ratio:auto;object-fit:contain;margin-bottom:0;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--surface2)}
+.edu-body{flex:1;min-width:0}
 
 /* ─── PROJECTS ─── */
 .projects-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem}
@@ -413,6 +415,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
   .timeline-item{gap:1rem}
   .timeline-dot{left:-1.98rem}
   .timeline-card{padding:1.25rem}
+  .edu-card{flex-direction:column;gap:1rem}
+  .edu-photo{width:100%;max-width:100%}
   .tc-header{flex-direction:column;align-items:flex-start}
   .project-card,.cert-card,.skill-group,.achieve-card,.cp-card{max-width:100%}
   .interest-card{max-width:calc(50% - .6rem)}
