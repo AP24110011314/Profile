@@ -52,7 +52,7 @@ To run this project locally, you don't need any complex build tools or servers.
 ## 📬 Contact
 
 - **Email:** ak8126659@gmail.com
-- **LinkedIn:** [Aman Maddheshiya](https://linkedin.com/in/amanmaddheshiya-886346253)
+- **LinkedIn:** [Aman Maddheshiya](https://linkedin.com/in/aman-maddheshiya)
 - **GitHub:** [AP24110011314](https://github.com/AP24110011314)
 
 ---

@@ -16,7 +16,7 @@
 
 - Asset filenames are case-sensitive and some contain spaces (`srmap image.jpg`, `vg10.jpg` vs `VG12.jpg`, `Dabur_internship.jpg`, `YSP.jpg`). Preserve exact names; modal uses `encodeURI()` — keep it.
 - Certificates: cards wire via `data-file` (preview `<img>`) + optional `data-pdf` (download link). Only `mongodb-certification` and `class-12-marksheet` have both PNG + PDF; `Dabur_internship.jpg` / `YSP.jpg` are JPG-only with no `data-pdf`.
-- Resume file is `Aman_Maddheshiya_Resume_Updated.pdf` (no spaces, case-sensitive) — keep both `#resume` hrefs pointing at it; don't add a duplicate copy.
+- Resume file is `Aman_Maddheshiya_Resume.pdf` (no spaces, case-sensitive) — keep both `#resume` hrefs pointing at it; don't add a duplicate copy.
 - Known placeholder: 8086 Emulator card links to `[PASTE YOUR ACTUAL REPO URL HERE]` — replace with real URL, don't ship as-is.
 - Mobile nav breakpoint is 1000px, not 768px (`style.css` mobile-nav comment explains why; ignore stale `script.js` "below 768px" comment). `.nav-links` / `.nav-scrim` must stay `position:absolute` — `#navbar` has `backdrop-filter`, which breaks `fixed` descendants (zero-height panel).
 - Fragile: LeetCode bars re-set `bar.style.width` to itself to retrigger the transition; `[data-aos]` `--aos-delay` is cleared after entry. Don't rely on either persisting.
